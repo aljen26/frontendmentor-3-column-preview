@@ -1,0 +1,120 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+.previews {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 50px 0;
+  max-width: 1312px;
+  margin: 0 auto;
+}
+
+.previews div {
+  max-width: 320px;
+  margin: 0 auto;
+  padding: 40px 48px 80px;
+  position: relative;
+}
+
+.previews div:first-child {
+  border-radius: 10px 10px 0 0;
+}
+
+.previews div:last-child {
+  border-radius: 0 0 10px 10px;
+}
+
+.previews div >* {
+  padding: 15px 0;
+}
+
+.previews img {
+  padding-top: 0;
+}
+
+.previews .category-name {
+  color: hsl(0, 0%, 95%);
+  font-family: BigShouldersDisplay;
+  letter-spacing: 2.5px;
+}
+
+.previews p, button {
+  color: hsla(0, 0%, 100%, 0.75);
+  font-size: 15px;
+  font-family: LexendDeca;
+  line-height: 1.75em;
+}
+
+.sedans {
+  background-color: hsl(31, 77%, 52%);
+  color:  hsl(31, 77%, 52%);
+}
+
+.suvs {
+  background-color: hsl(184, 100%, 22%);
+}
+
+.luxury {
+  background-color: hsl(179, 100%, 13%);
+}
+
+.previews div button {
+  position: absolute;
+  bottom: 40px;
+}
+.sedans button {
+  color:  hsl(31, 77%, 52%);
+}
+
+.suvs button {
+  color:  hsl(184, 100%, 22%);
+}
+
+.luxury button {
+  color:  hsl(179, 100%, 13%);
+}
+
+.previews button {
+  border: 1px solid hsl(0, 0%, 95%);
+  background-color: hsl(0, 0%, 95%);
+  border-radius: 25px;
+  padding: 5px 25px;
+}
+
+.previews button:hover {
+  background-color: hsl(0, 0%, 100%, 0);
+  color: hsl(0, 0%, 95%);
+}
+
+
+@font-face {
+  font-family: LexendDeca;
+  src: url(fonts/LexendDeca.ttf);
+}
+
+@font-face {
+  font-family: BigShouldersDisplay;
+  src: url(fonts/BigShouldersDisplay.ttf);
+}
+
+@media all and (min-width: 500px) {
+  .previews {
+    flex-direction: row;
+  }
+  .previews div {
+    margin: 0;
+    height: 540px;
+  }
+  .previews div:first-child {
+    border-radius: 10px 0 0 10px;
+    margin: 0 0 0 auto;
+  }
+
+  .previews div:last-child {
+    border-radius: 0 10px 10px 0;
+    margin: 0 auto 0 0;
+  }
+}
